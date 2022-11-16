@@ -1,5 +1,6 @@
+"use client";
 import { useSession, signIn, signOut } from "next-auth/react";
-export default function Component() {
+export default function Component({ children }) {
   const { data: session } = useSession();
   if (session) {
     return (
@@ -7,6 +8,7 @@ export default function Component() {
         Signed in as {session.user.email} <br />
         <pre>{JSON.stringify(session.user)}</pre>
         <button onClick={() => signOut()}>Sign out</button>
+        {children}
       </>
     );
   }
