@@ -1,5 +1,7 @@
 # Next JS 13 Auth
 
+Did not get the unstable_getServerSession() working for a server side session.
+
 ## Code History
 
 The code in this repository is base on the following:
